@@ -10,25 +10,22 @@ public class Exercise3 {
 
     public static void main (String[] args){
 
-
-        Scanner myObj = new Scanner(System.in);
-
-        String name = JOptionPane.showInputDialog(
-                null, "Please enter your name?");
-        System.out.println(name);
-
-        String course = JOptionPane.showInputDialog(
-                null, "Please enter your course?");
-        System.out.println(course);
-
-        String numOfSnacks = JOptionPane.showInputDialog(
-                null, "How many snacks would you like?");
-        System.out.println(numOfSnacks);
-
-        double price = Double.parseDouble(JOptionPane.showInputDialog("price"));
+        String name, course;
+        int numOfSnacks;
 
 
-        JOptionPane.showMessageDialog(null, "Name:" + name +"\nCourse:" + course + "\nSnacks" + numOfSnacks + "\nCost: " + price );
+         name = JOptionPane.showInputDialog("Please enter your name?");
+
+
+         course = JOptionPane.showInputDialog("Please enter your course?");
+
+
+        numOfSnacks = Integer.parseInt(JOptionPane.showInputDialog("How many snacks would you like?"));
+
+
+        JOptionPane.showMessageDialog(null, "Name:" + name +"\nCourse:" + course + "\nSnacks" + numOfSnacks + "\nCost: "  + (numOfSnacks*2),
+        "Receipt",JOptionPane.INFORMATION_MESSAGE);
+        System.exit(0);
 
 
 
